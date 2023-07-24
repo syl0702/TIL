@@ -34,7 +34,13 @@ git remote
 - `git remote add origin <remote url>`
 - remote 저장소 주소를 추가하는 명령어
 
-
+```shell
+git remote -v
+```
+- git remote option 중 하나
+- 현재 연결된 위치의 remote 주소를 출력
+- 오른쪽 주소는 왼쪽의 별명을 가졌음을 디스플레이
+- `git remote`만 출력할 경우 현재 연결된 별명만 나온다
 
 ##  git 명령어
 
