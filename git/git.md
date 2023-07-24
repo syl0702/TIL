@@ -85,4 +85,12 @@ git push origin master
 ```
 - `master` 브랜치를 `origin` 원격 저장소로 업로드
 
+## Tips
+- `Ctrl+ l` : 터미널 클리어
+- VS 코드 깃에 업로드 및 업데이트 하기
+    1. `git init` : 첫 업로드 때만 (폴더 상위에 이미 git init을 했다면 그 내부에서는 하지 않는 것을 추천. 충돌 일어날 가능성이 있음)
+    2. `git add .`
+    3. `git commit -m '개념 추가'`
+    4. `git remote add origin url` : 첫 업로드 때만. 보통 복붙으로 해결
+    5. `git push origin master`
 
