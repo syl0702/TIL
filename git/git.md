@@ -32,7 +32,7 @@ git config
 ```
 - git 설정을 하는 명령어
 - 일반적으로 `--global` 옵션으로 최초 한번만 실행
-- `git config --global user.mail 'your@email.com'`
+- `git config --global user.email 'your@email.com'`
     - `git config --global user.email`를 통해 값 확인
 - `git config --global user.name 'yourname'`
     - `git config --global user.name`를 통해 값 확인
