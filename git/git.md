@@ -85,6 +85,17 @@ git push origin master
 ```
 - `master` 브랜치를 `origin` 원격 저장소로 업로드
 
+```shell
+git clone <remote url>
+```
+- 원격 저장소에 있는 레포를 현재 폴더에 복제
+
+```shell
+git pull origin master
+```
+- 원격 저장소에 마지막 코드 상태를 다운로드
+
+
 ## Tips
 - `Ctrl+ l` : 터미널 클리어
 - VS 코드 깃에 업로드 및 업데이트 하기 : 업로드 전 **저장** 필수!
