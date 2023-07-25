@@ -99,6 +99,7 @@ git clone <remote url>
 ```
 - 원격 저장소에 있는 레포를 현재 폴더에 복제
 - 우리는 Git Bash를 이용하여 복제함
+- 복제할 때 `Ctrl+V` 실행이 되지 않으므로 마우스 사용할 것
 
 ```shell
 git pull origin master
