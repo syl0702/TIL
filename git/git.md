@@ -105,6 +105,15 @@ git pull origin master
 ```
 - 원격 저장소에 마지막 코드 상태를 다운로드
 
+```shell
+git branch -c
+```
+- 브랜치를 새로 생성
+
+```shell
+git branch -a
+```
+- 생성된 브랜치를 모두 리스트업
 
 ## Tips
 - `Ctrl+ l` : 터미널 클리어
