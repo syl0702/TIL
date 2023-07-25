@@ -22,3 +22,12 @@
 - `rm -f`
     - force
     - 권한이 없어도 강제적으로 삭제
+
+
+## Linux 개념
+
+### lf와 crfl의 차이
+- `lf` (Line feed) : 엔터
+- `Carriage Return` : 맨 첫 줄로 가는 것
+- 이 두 가지를 윈도우와 리눅스가 다르게 받아 들임
+- 어떤 os는 엔터를 `lf`로 어떤 것은 `crfl`로 인식

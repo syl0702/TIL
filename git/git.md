@@ -12,6 +12,15 @@
 
 ![areas](./assets/areas.png)
 
+
+## git flow
+
+![gitlab_flow](./assets/gitlab_flow.png)
+- 개발자들은 각자의 developer branch에 담당하는 개발 파트를 지속적으로 개발한다
+- 이후 이를 release branches 혹은 알파 테스트로 테스트 하며 발생하는 버그들을 고쳐 나간다
+- 이러한 과정이 완료되면 머지를 통해 메인인 Master branch에 적용한다
+- 갑자기 큰 문제가 Master branch에서 발생할 경우 hotfix branch를 통해서 수정 후 바로 적용하기도 한다. 하지만 이는 추천되지 않는 경로
+
 ## 설정
 ```shell
 git status
@@ -89,6 +98,7 @@ git push origin master
 git clone <remote url>
 ```
 - 원격 저장소에 있는 레포를 현재 폴더에 복제
+- 우리는 Git Bash를 이용하여 복제함
 
 ```shell
 git pull origin master
