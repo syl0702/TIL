@@ -113,7 +113,7 @@ True, False로 이루어진 타입
 
 # 3. 형 변환
 ## 3.1 암시적 형 변환
-```
+```python
 a = True
 b = False
 c = 1
