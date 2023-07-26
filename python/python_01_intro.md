@@ -68,3 +68,113 @@ True, False로 이루어진 타입
 - `and` : 양쪽 모두 True일 때, True를 반환
 - `or` : 양쪽 모두 False일 때, False를 반환
 - `not` : 값을 반대로 전환
+
+### 단축평가 (and)
+- 두 숫자가 나왔을 때 이를 TF처럼 인식하여 결과값을 내는 방법.
+- `and`의 경우 앞이 F이면 무조건 F이지만, 앞이 T라면 뒤의 값을 파악해야 함.
+- 그에 따라 파이썬에서는 앞에 0이 나왔을 때는 무조건 그 값인 0을 출력하고 0이 아닌 숫자가 나왔을 때는 뒤의 값이 결정한다고 인식하여 뒤의 값을 출력하게 됨.
+`print(3 and 5)` : 5 출력
+`print(3 and 0)` : 0 출력
+`print(0 and 5)` : 0 출력
+`print(0 and 0)` : 0 출력
+
+### 단축평가 (or)
+- `or`의 경우 앞이 T면 무조건 T가 나오고 앞이 F면 뒤의 값에 따라 결정되어 출력된다.
+`print(3 and 5)` : 3 출력
+`print(3 and 0)` : 3 출력
+`print(0 and 5)` : 5 출력
+`print(0 and 0)` : 0 출력
+
+## 2.4 복합연산자
+`a = a + b` : a += b
+`a = a - b` : a -= b
+`a = a * b` : a *= b
+`a = a / b` : a /= b
+`a = a // b` : a //= b
+`a = a % b` : a %= b
+`a = a ** b` : a **= b
+
+## 2.5 기타 연산자
+- concatenation (순차)
+`a = 'hi' b= 'hello'일 때 a+b` : hihello 출력
+
+- containment (포함)
+`print ('a' in apple)` : True 출력
+
+### 우선순위
+0. ()를 통해 그룹
+1. **
+2. 산술연산자 (*,/)
+3. 산술연산자 (+.-)
+4. 비교연산자, in, is
+5. not
+6. and
+7. or
+
+# 3. 형 변환
+## 3.1 암시적 형 변환
+```
+a = True
+b = False
+c = 1
+print(a+c)
+print(b+c)
+```
+: 2와 1 출력
+- True와 False를 각각 1과 0으로 인식하여 계산함.
+
+## 3.2 명시적 형 변환
+- int() : string, float를 int로 변환
+- float() : string, int를 float로 변환
+- str() : int, float 등을 string으로 변환
+- bool() : int, list 등을 boolean으로 변환
+
+# 4. 시퀀스(Sequence) 자료형
+시퀀스는 데이터의 순서대로 나열된 자료 구조. (순서대로 나열되었다는 것은 정렬된 것과 다르다)
+1. 리스트
+2. 튜플
+3. 레인지
+4. 문자열
+
+## 4.1 List
+- 선언 : 변수이름 = [value1, value2, value3 ...]
+- 접근 : 변수이름[index]
+- 컴퓨터에서는 늘 **0**이 시작 지점이라는 것을 잊지 말기!
+- 이미 location에 '서울', '대구', '대전'이 있을 때, `location[1] = '부산'`이라고 한 뒤 출력하면 '서울', '부산', '대전'으로 수정됨.
+
+## 4.2 Tuple
+- 선언: 변수이름 = (value1, value2, value3)
+- 접근 : 변수이름[index]
+- 리스트와 유사하지만 수정이 불가능(immutable)하다.
+
+## 4.3 range
+- range(n) : 0부터 n-1까지 범위
+- range(n, m) : n부터 m-1까지 범위
+- range(n, m, s) : n부터 m-1까지 +s만큼 증가하는 범위
+
+## 4.4 String
+기본 데이터 구조 참고
+
+## 4.5 시퀀스에서 활용 가능한 연산/함수
+- indexing : 호출
+- slicing : a 이상 b 미만의 수 호출
+- slicing (k 간격으로)
+- `len` : 항목의 길이 (갯수)
+- `min` : 항목에서의 최솟값
+- `max` : 항목에서의 최댓값
+- `func.count(n)` : func에서 n이라는 항목이 몇 번 나왔는지 횟수 호출
+
+# 5. 시퀀스 데이터가 아닌 자료 구조
+## 5.1 Set
+수학에서 사용하는 집합과 동일하게 처리 (중복된 값이 없음)
+- 선언: 변수이름 = {value1, value2, value3...}
+- `-` : 차집합
+- `|` : 합집합 (중복은 나타나지 않음)
+- `&` : 교집합
+
+## 5.2 Dictionary
+- 선언 : 변수이름 = {key1:value1, key2:value2,...}
+- 접근 : 변수이름[key]
+- dictionary는 key와 value가 쌍으로 이루어져 있다.
+- key에는 immutable한 모든 것을 사용 가능 (불변갑시 string, integer)
+- value에는 모든 데이터 가능(list, dictionary도 가능)
