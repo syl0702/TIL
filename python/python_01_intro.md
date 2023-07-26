@@ -45,3 +45,26 @@ True, False로 이루어진 타입
 2. str.format() e.g. print('홍길동은 {}살입니다.' .format(age))
 3. f-string e.g. print(f'홍길동은 {age}살입니다.')
 
+# 2. 연산자
+## 2.1 산술 연산자
+- `print(a + b)` : a에서 b 더하기
+- `print(a - b)` : a에서 b 빼기
+- `print(a * b)` : a 곱하기 b
+- `print(a / b)` : a 나누기 b
+- `print(a ** b)` : a의 b 거듭제곱
+- `print(a // b)` : a를 b로 나눈 몫
+- `print(a % b)` : a를 b로 나눈 나머지
+- `print(divmod(a,b))` : a를 b로 나눈 몫과 나머지
+
+## 2.2 비교 연산자
+- `print(a > b)`
+- `print(a < b)`
+- `print(a >= b)`
+- `print(a <= b)`
+- `print(a == b)`
+- `print(a != b)`
+
+## 2.3 논리 연산자
+- `and` : 양쪽 모두 True일 때, True를 반환
+- `or` : 양쪽 모두 False일 때, False를 반환
+- `not` : 값을 반대로 전환
