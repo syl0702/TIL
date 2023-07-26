@@ -31,5 +31,6 @@ print('True) if 1 < 0 else print('False')
 if 1 < 0:
     print('True')
 else:
-    print('False)```
+    print('False)
+    ```
 동일한 의미이다.
