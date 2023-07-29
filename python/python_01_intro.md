@@ -196,13 +196,22 @@ print(b+c)
     print(my_range[1:3])
     print(my_string[1:3])
     ```
- - 결과 값 각각 [2, 3]/(2,3)/range(2,4)/23
+ - 결과 값
+ ```shell
+ [2, 3]
+ (2,3)
+ range(2,4)
+ 23
+ ```
 
 - slicing (k 간격으로)
     ```python
     list(my_range[2:6:2])
     ```
- - 결과 값 [3, 5]
+ - 결과 값
+ ```shell
+ [3, 5]
+ ```
 
 - `len` : 항목의 길이 (갯수)
 - `min` : 항목에서의 최솟값
