@@ -98,8 +98,30 @@ True, False로 이루어진 타입
 - concatenation (순차)
 `a = 'hi' b= 'hello'일 때 a+b` : hihello 출력
 
-- containment (포함)
+- containment (포함) : in
 `print ('a' in apple)` : True 출력
+
+- identity
+```python
+a = 1
+b = 1
+print(a is b)
+print(id(a))
+print(id(b))
+```
+ - 이 경우 True와 함께 둘의 id는 일치하는 것으로 나옴.
+ - 0~256까지의 숫자들은 파이썬 내부에 저장되어 있어서 id가 지정되어 있음.
+
+```python
+a = 123123
+b = 123123
+print(a is b)
+print(id(a))
+print(id(a))
+```
+   - 이 경우 **False**가 생성됨. 둘의 id는 별개로 나옴.
+   - 파이썬 내부에 저장된 숫자가 아니기 때문에 숫자를 호출할 때마다 id가 새로 생성되는 것.
+
 
 ### 우선순위
 0. ()를 통해 그룹
@@ -146,6 +168,11 @@ print(b+c)
 - 선언: 변수이름 = (value1, value2, value3)
 - 접근 : 변수이름[index]
 - 리스트와 유사하지만 수정이 불가능(immutable)하다.
+- 수정이 불가능하다는 것은 .append/rm 등이 불가능함을 의미.
+
+> ### Tips
+> 리스트와 튜플 차이 알아보기 [list and tuple](https://bigdaheta.tistory.com/8)
+
 
 ## 4.3 range
 - range(n) : 0부터 n-1까지 범위
@@ -158,7 +185,25 @@ print(b+c)
 ## 4.5 시퀀스에서 활용 가능한 연산/함수
 - indexing : 호출
 - slicing : a 이상 b 미만의 수 호출
+    ```python
+    my_list = [1, 2, 3, 4, 5]
+    my_tuple = (1, 2, 3, 4, 5)
+    my_range = range(1, 100)
+    my_string = '12345'
+
+    print(my_list[1:3])
+    print(my_tule[1:3])
+    print(my_range[1:3])
+    print(my_string[1:3])
+    ```
+ - 결과 값 각각 [2, 3]/(2,3)/range(2,4)/23
+
 - slicing (k 간격으로)
+    ```python
+    list(my_range[2:6:2])
+    ```
+ - 결과 값 [3, 5]
+
 - `len` : 항목의 길이 (갯수)
 - `min` : 항목에서의 최솟값
 - `max` : 항목에서의 최댓값
@@ -176,5 +221,23 @@ print(b+c)
 - 선언 : 변수이름 = {key1:value1, key2:value2,...}
 - 접근 : 변수이름[key]
 - dictionary는 key와 value가 쌍으로 이루어져 있다.
-- key에는 immutable한 모든 것을 사용 가능 (불변갑시 string, integer)
+- key에는 immutable한 모든 것을 사용 가능 (불변값: string, integer/자료형)
 - value에는 모든 데이터 가능(list, dictionary도 가능)
+
+# 데이터 타입
+1. Number
+2. Boolean
+3. String
+
+# 자료구조
+- 시퀀스 자료형
+1. [List] : mutable
+2. (Tuple) : immutable
+3. range() : immutable
+4. 'String' : immutable
+> ### Tips
+> Mutable과 Immutable 더 알아보기 [mutable과 immutable] (https://velog.io/@chobe1/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B8%B0%EC%B4%88-Mutable-vs-Immutable-Objects)
+
+- 시퀀스가 아닌 자료형
+1. {Set} : mutable
+2. {Dictionary} : mutable

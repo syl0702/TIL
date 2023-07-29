@@ -13,13 +13,14 @@
 - `func = input`의 경우 input은 문자로 인식되기 때문에 숫자 입력임을 확인하기 위해서는 `func = int(input())`로 정의를 시작해야 함.
 
 ### elif
+    ```
     if <조건식>:
         if 조건이 참인 경우 실행
     elif <조건식>:
         elif 조건이 참인 경우 실행
     ...
     else:
-        위의 조건식에 하나도 부합하지 않는 경우 실행
+        위의 조건식에 하나도 부합하지 않는 경우 실행```
 
 ## 조건 표현식
 true_value if <조건식> else false_value
@@ -33,4 +34,5 @@ if 1 < 0:
 else:
     print('False)
     ```
+    
 동일한 의미이다.
