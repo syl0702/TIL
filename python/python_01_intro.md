@@ -163,6 +163,23 @@ print(b+c)
 - 접근 : 변수이름[index]
 - 컴퓨터에서는 늘 **0**이 시작 지점이라는 것을 잊지 말기!
 - 이미 location에 '서울', '대구', '대전'이 있을 때, `location[1] = '부산'`이라고 한 뒤 출력하면 '서울', '부산', '대전'으로 수정됨.
+- list에 추가를 위해서는 `list.append()`를 사용
+- list에서 지정된 함수로 list 모든 항목을 처리하기 위해서는 `map` 사용.
+example
+```python
+numbers = range(1, 201)
+result = []
+for number in numbers:
+    if number % 7 == 0 and number & 5 != 0:
+        result.append(number)
+    else:
+        pass
+
+result = list(map(str, result))
+
+print(','.join(result))
+# 리스트의 값과 값 사이에 '구분자'에 들어온 구분자를 넣어서 하나의 문자열로 합해줌.
+```
 
 ## 4.2 Tuple
 - 선언: 변수이름 = (value1, value2, value3)
