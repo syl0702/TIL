@@ -74,3 +74,43 @@ answer = temp
 
 return answer
 ```
+
+## 숨어있는 숫자의 덧셈(2)
+- 연속된 숫자를 리스트로 추출하기 위한 새 함수.
+```python
+import re
+numbers = my_string
+numbers = re.findall(r'\d+', numbers)
+numbers = list(map(int, numbers))
+answer = sum(numbers)
+```
+
+## 가까운 수 
+- **다시 풀 것**
+- 가장 처음에 할 것은 분류!
+- 분류를 통해 가장 작은 값부터 적용하여 자연스럽게 절대 값은 같지만 더 작은 수를 택하게 만든다.
+```python
+def solution(array, n):
+    answer = 0
+    array.sort()
+    # print(array)
+    k = 1000
+    for num in array:
+        if abs(num - n) < k:
+            k = abs(num - n)
+            answer = num
+    return answer
+```
+
+## k의 개수 
+- **다시 풀 것**
+- 있는지 없는지를 간단히 확인 후 세는  방법을 사용할 것.
+- 각 변수가 문자인지 숫자인지 등을 파악 필요
+```python
+def solution(i, j, k):
+    answer = 0
+    for n in range(i, j+1):
+        if str(k) in str(n):
+            answer += str(n).count(str(k))
+    return answer
+```
