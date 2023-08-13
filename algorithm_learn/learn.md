@@ -114,3 +114,51 @@ def solution(i, j, k):
             answer += str(n).count(str(k))
     return answer
 ```
+
+## 내적 (다시 풀기)
+- 두 리스트 간의 곱
+- zip으로 해결
+```python
+temp = [x*y for x,y in zip(a, b)]
+```
+
+## 진료 순서 정하기 (다시 풀기)
+- sort한 list를 새로 만들고 이를 역순으로 배치.
+이후 그 리스트의 index에 +1한 것을 빈 리스트에 삽입.
+```python
+emergency_set = sorted(emergency)
+    emergency_set.reverse()
+    for i in emergency:
+        
+        answer.append(emergency_set.index(i)+1)
+    return answer
+```
+## 한번만 등장한 문자 (다시)
+- 각 문자별로 갯수를 구하고 이에 따라 조건을 만들어 주면 됨.
+```python 
+s1 = sorted(s)
+    for i in s1:
+        if s1.count(i) == 1:
+            answer += i
+```
+
+## 이진수 더하기
+- 십진수 만드는 법 기억하기
+- `int(변수, 2)`
+- 이진수로 만들기는 `bin(a)`.
+- slicing 활용력 높이기
+
+## 컨트롤제트 (다시 풀기)
+- `.split()`: 띄어쓰기에 맞춰서 문자열을 나누어 줌.
+- `.pop()`은 마지막 항목 삭제
+```python
+s1 = s.split()
+    for n in s1:
+        if n == 'Z':
+            temp.pop()
+            continue
+        
+        temp.append(int(n))
+    answer = sum(temp)
+```
+
