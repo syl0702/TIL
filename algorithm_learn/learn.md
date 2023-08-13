@@ -39,6 +39,19 @@ if direction == "right":
 elif dirction == "left":
     answer = numbers[1:] + [numbers[0]]
 ```
+## 공 던지기 (위와 같은 유형)
+- 회전 할 때 slicing을 가장 먼저 생각해볼 것
+```python
+temp = []
+    if len(numbers) % 2 == 0:
+        players = numbers[0::2]
+    else:
+        players = numbers[0::2] + numbers[1::2]
+
+    answer = players[k % len(players) -1]
+    
+    return answer
+```
 
 ## 피자 나눠먹기 (2)
 - n명이 모두 같은 수의 피자를 먹을 수 있게 하는 피자 판의 수.
@@ -162,3 +175,41 @@ s1 = s.split()
     answer = sum(temp)
 ```
 
+## 소인수 분해
+- 소수로 구성되어야 하며 중복되는 값은 리스트에 포함되지 말아야 한다.
+- 소수로 나눈 뒤의 몫에서 다시 새로 나누어야 함.
+```python
+d = 2
+    while d <= n:
+        if n % d == 0:
+            if d not in answer:
+                answer.append(d)
+            n = n / d
+        else:
+            d += 1
+    return answer
+```
+
+## 7의 개수
+- array은 현재 list.
+- array 각 항목을 str로 변환 하고 이를 모두 붙여야 한다.
+- 이후 문자열이 된 곳에 `count`를 사용하면 답이 나올 수 있다.
+```python
+ a = ''.join(map(str,array))
+    answer = a.count('7')
+    return answer
+```
+## 약수의 개수와 덧셈
+- 리스트를 새로 만들어서 이후 갯수를 세기 보다는 바로 갯수 세는 것 연습 필요
+- 범위의 의미를 스스로 인지하고 코드를 써야 함.
+```python
+for n in range(left, right+1):
+        count = 0
+        for i in range(1, n+1):
+            if n % i == 0:
+                count += 1
+        if count % 2 == 0:
+            answer += n
+        else:
+            answer -= n
+```
