@@ -200,6 +200,7 @@ d = 2
     return answer
 ```
 ## 약수의 개수와 덧셈
+- 다시 풀 것
 - 리스트를 새로 만들어서 이후 갯수를 세기 보다는 바로 갯수 세는 것 연습 필요
 - 범위의 의미를 스스로 인지하고 코드를 써야 함.
 ```python
@@ -212,4 +213,43 @@ for n in range(left, right+1):
             answer += n
         else:
             answer -= n
+```
+
+## 잘라서 배열로 저장하기
+- 다시 풀것
+- range도 띄어서 볼 수 있음
+```python
+for i in range(0, len(my_str), n):
+        answer.append(my_str[i:i+n])
+    return answer
+```
+
+## 영어가 싫어요
+- 다시 풀것
+- enumerate() 복습
+- 이미 있는 리스트에 **대체**하는 방법도 기억할 것.
+```python
+def solution(numbers):
+    alph_num = ['zero', 'one', 'two','three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+    for key, value in enumerate(alph_num):
+            numbers = numbers.replace(value, str(key))
+            
+    return int(numbers)
+```
+
+## 문자열 계산하기
+- 다시!
+- eval() 함수 기억하기
+- eval 없이 푸는 법도 기억
+```python
+def solution(my_string):
+    my_strings = my_string.split()
+    answer = int(my_strings[0])
+    for i in range(1, len(my_strings),2):
+        if my_strings[i] == '+':
+            answer += int(my_strings[i+1])
+        else:
+            answer -= int(my_strings[i+1])
+    
+    return answer
 ```
