@@ -253,3 +253,18 @@ def solution(my_string):
     
     return answer
 ```
+
+## 외계어 사전
+- 다시 풀 것.
+- sort해서 서로 비교하기!
+- 나중에 set로도 시도해볼 것.
+```python
+def solution(spell, dic):
+    answer = 0
+    for d in dic:
+        if sorted(d) == sorted(spell):
+            return 1
+        else:
+            answer = 2
+    return answer
+```
