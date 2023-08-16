@@ -161,6 +161,21 @@ s1 = sorted(s)
 - 이진수로 만들기는 `bin(a)`.
 - slicing 활용력 높이기
 
+## 3진법 뒤집기
+- 이진수와는 다르게 직접 코드를 짜야 함.
+- 몫과 나머지를 구하는 `divmod(a, b)` 필요.
+```python
+def solution(n):
+    answer = 0
+    three_base = ''
+    while n > 0:
+        n, mod = divmod(n, 3)
+        three_base += str(mod)
+    print(three_base)
+    answer = int(three_base, 3)
+    return answer
+```
+
 ## 컨트롤제트 (다시 풀기)
 - `.split()`: 띄어쓰기에 맞춰서 문자열을 나누어 줌.
 - `.pop()`은 마지막 항목 삭제
@@ -268,3 +283,39 @@ def solution(spell, dic):
             answer = 2
     return answer
 ```
+
+## 캐릭터의 좌표
+- 이전의 좌표에 대한 기본 컨셉.
+- 제한치를 먼저 설정하고 그것에 적합할 경우에만 실행될 수 있게 해야.
+- 겁 먹지 말기.
+```python
+def solution(keyinput, board):
+    answer = []
+    x, y = 0, 0
+    xlim = board[0]//2
+    ylim = board[1]//2
+    
+    for key in keyinput:
+        if key == "right":
+            if x >= xlim:
+                x = xlim
+            else:
+                x += 1
+        elif key == "left":
+            if x <= -xlim:
+                x = -xlim
+            else:
+                x -= 1
+        elif key == "up":
+            if y >= ylim:
+                y = ylim
+            else:
+                y += 1
+        elif key == "down":
+            if y <= -ylim:
+                y = -ylim
+            else:
+                y -= 1
+    answer = [x, y]
+```
+
