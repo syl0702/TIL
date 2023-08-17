@@ -342,3 +342,22 @@ for i in range(len(score)):
 ## 유한 소수 판별하기
 - 다시 풀 것
 - return과 answer 정의한 후 return이 여전히 헷갈림. 질문 필수
+
+## 저주의 숫자 3
+- 다시 풀 것
+- while과 if문의 차이에 대한 설명을 들어야 할 듯
+
+## 특이한 정렬
+- 다시 풀 것!
+- `lambda x:`에 대한 개념 공부!
+- `lambda x:` 이후의 기준을 통해 리스트가 정렬될 수 있다.
+- **중요**
+```python
+def solution(numlist, n):
+    answer = sorted(numlist, reverse = True)
+    answer = sorted(numlist, key = lambda x: (abs(n-x), n-x))
+    return answer
+
+print(solution([1, 2, 3, 4, 5, 6], 4))
+```
+- 4를 기준으로 차이가 적게 나는 순서로 배열하기.
