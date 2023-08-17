@@ -323,3 +323,22 @@ def solution(keyinput, board):
 - 다시 풀 것
 - return과 answer의 차이 명확하지 않음.
 - 왜 특정 사례에서만 실패가 뜨는지 모르겠음.
+
+
+## 등수 매기기
+- 다시 풀 것
+- 순위 매기는 것에 대한 논리 숙지 할 것! (**빈출**)
+```python
+for i in range(len(score)):
+        temp.append(sum(score[i]) / 2)
+        sorted_temp = sorted(temp, reverse = True)
+        answer = [sorted_temp.index(s)+1 for s in temp]
+```
+
+## 치킨 쿠폰
+- 다시 풀 것
+- 규칙 잘/빠르게 파악해야 함.
+
+## 유한 소수 판별하기
+- 다시 풀 것
+- return과 answer 정의한 후 return이 여전히 헷갈림. 질문 필수
