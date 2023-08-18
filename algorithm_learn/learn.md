@@ -53,6 +53,24 @@ temp = []
     return answer
 ```
 
+## 문자열 밀기(같은 유형)
+- 다시 풀 것
+- 회전하면서 계속 잘라 붙이기
+```python
+def solution(A, B):
+    
+    i = 0
+    if A == B:
+        return 0
+    else:
+        while i < len(A):
+            i += 1
+            A = A[-1] + A[:-1]
+            if A == B:
+                return i
+    return -1
+```
+
 ## 피자 나눠먹기 (2)
 - n명이 모두 같은 수의 피자를 먹을 수 있게 하는 피자 판의 수.
 - 최소 공배수 이용!
