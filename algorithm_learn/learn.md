@@ -401,3 +401,7 @@ print(solution([1, 2, 3, 4, 5, 6], 4))
 ```python
 temp1 = [k for k,v in a_dict.items() if max(a_dict.values()) == v]
 ```
+
+## 소수 만들기
+- 다시 풀 것.
+- 한 함수 안에 들어갈 수 없다면 새로운 함수를 만들고 적용시키는 연습 필요!
