@@ -420,3 +420,7 @@ temp1 = [k for k,v in a_dict.items() if max(a_dict.values()) == v]
 - 다시 풀 것.
 - 좌표 값을 dx, dy로 나누어서 표현.
 - 범위 정의 주의!
+
+## 겹치는 선분의 길이
+- 다시 풀 것.
+- 모든 항목에 대해 적용하는 방법을 늘 고민할 것. for문 포함, append 기능 등!
