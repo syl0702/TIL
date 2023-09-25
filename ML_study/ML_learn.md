@@ -52,3 +52,15 @@ le = LabelEncoder()
 train_df['item_label'] = train_df[['item']].apply(le.fit_transform)
 train_df
 ```
+
+### 분류 결정 임곗값
+- Recall와 Precision 서로 trade-off이다.
+- Threshold 낮추면 Positive로 예측될 확률이 커짐 -> Recall이 높아진다.
+- Threshold 높으면 Negative로 예측될 확률이 커짐 -> FP 감소/잘 맞춘 TP도 낮아질 수 있다 -> Precision이 높아진다. 이때 전반적으로 작아질 수 있다.
+
+- FP를 0으로 만들면 정밀도 100%가 됨. -> Threshold 1.0으로 확 높이기.
+- 확실하지 않으면 0으로 예측함.
+
+- Threshold 0으로 만들면 재현율 100% 됨.
+- 음성으로 잘못 예측한게 없어짐. TP랑 FP가 쭉 올라감.
+- FP 올라가면 정밀도는 낮아지고 재현율 높아져.
