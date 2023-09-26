@@ -64,3 +64,21 @@ train_df
 - Threshold 0으로 만들면 재현율 100% 됨.
 - 음성으로 잘못 예측한게 없어짐. TP랑 FP가 쭉 올라감.
 - FP 올라가면 정밀도는 낮아지고 재현율 높아져.
+
+## 앙상블
+- 여러 모델들을 함께 사용하는 방법
+- Voting, Bagging, Boostingdl 있음
+- Bagging 대표적 예시는 랜덤 포레스트
+- 단일 모델의 약점을 다수의 모델들을 결합하여 보완.
+- 성능이 떨어지더라도(과대적합/과소적합) 서로 다른 유형의 모델을 섞는 것이 오히려 전체 성능에 도움이 됨.
+- Voting, Bagging은 여러 개의 분류기가 투표를 통해 최종 예측 결과를 결정하는 방식
+- Voting은 서로 다른 알고리즘을 가진 분류기를 결합
+- Bagging은 같은 알고리즘을 가진 분류기를 결합하지만 데이터 샘플링을 서로 다르게 수행하여 Voting 수행
+- Soft Voting은 predic_proba 가지고 있는 모델들만 가능하다.
+- Hard Voting은 어디든 다 가능
+
+### Random Forest
+- n_estimators: 랜덤 포레스트에서 결정 트리의 개수를 지정. 기본은 100개
+    - 이것만 조절하는 것 추천
+- max_features
+- max_depth, min_samples_leaf
